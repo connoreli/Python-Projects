@@ -13,22 +13,22 @@ class Team:
         return msg
     
 # child class no.1
-class Mavs:
+class Mavs(Team):
     name = 'Dallas Mavericks'
     coach = 'Jason Kidd'
     record = '50-30'
 
-    def summary(self):
+    def summary(information):
         msg = '\nThe Mavs are having a great year and are looking to enter the playoffs in the No.3 seed in the Western Conference!'
         return msg
 
 #child class no.2
-class Lakers:
+class Lakers(Team):
     name = 'Los Angeles Lakers'
     coach = 'Frank Vogel'
     record = '36-44'
 
-    def sad_summary(self):
+    def sad_summary(information):
         msg = '\nThe Lakers had an awful year and did not qualify for the NBA playoffs.'
         return msg
 
