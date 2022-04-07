@@ -18,7 +18,7 @@ class Mavs(Team):
     coach = 'Jason Kidd'
     record = '50-30'
 
-    def summary(information):
+    def information(self):
         msg = '\nThe Mavs are having a great year and are looking to enter the playoffs in the No.3 seed in the Western Conference!'
         return msg
 
@@ -28,14 +28,14 @@ class Lakers(Team):
     coach = 'Frank Vogel'
     record = '36-44'
 
-    def sad_summary(information):
+    def information(self):
         msg = '\nThe Lakers had an awful year and did not qualify for the NBA playoffs.'
         return msg
 
 
 if __name__ == '__main__':
     mavs = Mavs()
-    print(mavs.summary())
+    print(mavs.information())
     
     lakers = Lakers()
-    print(lakers.sad_summary())
+    print(lakers.information())
