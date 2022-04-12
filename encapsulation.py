@@ -3,8 +3,6 @@
 class Protected:
     def __init__(self):
         self._varProtected = 50
-
-    def __init__(self):
         self.__privateVAR = 51
 
     def getPrivate(self):
