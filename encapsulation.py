@@ -2,11 +2,11 @@
 
 class Protected:
     def __init__(self):
-        self.varProtected = 50
+        self._varProtected = 50
 
-    obj = Protected()
-    obj.varProtected = 51
-    print(obj.varProtected)
+obj = Protected()
+obj._varProtected = 51
+print(obj._varProtected)
 
 
 class Protected:
