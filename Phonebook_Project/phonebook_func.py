@@ -223,6 +223,11 @@ def onUpdate(self):
         messagebox.showerror('Missing information', 'Please select a name from the list. \nThen edit the phone or email information.')
     onClear(self)
 
+
+
+
+
+
 if __name__ == '__main__':
     pass
         
