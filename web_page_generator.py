@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+import webbrowser
 
 text = '''
 <html>
@@ -24,18 +25,22 @@ class ParentWindow(Frame):
 
         self.varBody = StringVar()
 
-    def load_gui(self):
-        self.txt_body = tk.Entry(self.master, text='')
+        self.txt_body = Entry(self.master, text='')
         self.txt_body.grid(row=1, column=0, rowspan=1, columnspan=2, padx=(30,40), pady=(0,0), sticky=N+E+W)
 
         self.btnSubmit = Button(self.master, text='Submit', width=10, height=2, command=self.submit)
         self.btnSubmit.grid(row=2, column=1, padx=(0,0), pady=(30,0), sticky=NE)
 
     def submit(self):
-        
-        
-
+        customText = self.txt_body.get()
+        html_file = open('web_page_generator.html', 'w')
+        html_format = "<html>\n<body>\n<p>" + customText + "</p>\n</body>\n</html>"
+        html_file.write(html_format)
+        html_file.close()
+        webbrowser.open_new_tab('web_page_generator.html')
 
 
 if __name__ == '__main__':
-    pass
+    root = tk.Tk()
+    App = ParentWindow(root)
+    root = mainloop()
